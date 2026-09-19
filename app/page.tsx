@@ -11,13 +11,13 @@ const tools = [
   {
     href: "/air-fryer-wattage-cost",
     title: "Running cost calculator",
-    status: "coming soon",
+    status: "live",
     desc: "Enter your air fryer's wattage and your electricity rate to see what it actually costs to run.",
   },
   {
     href: "/air-fryer-size-calculator",
     title: "Size finder",
-    status: "coming soon",
+    status: "live",
     desc: "Answer a few questions about your household and get a recommended air fryer capacity.",
   },
 ];
