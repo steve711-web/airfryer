@@ -33,7 +33,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${readout.variable}`}>
-      <body className="font-body">{children}</body>
+      <body className="font-body">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Air Fryer Convert",
+              url: "https://airfryerconvert.com",
+              description:
+                "Three air fryer calculators: an oven-to-air-fryer converter, a running cost calculator, and a size finder.",
+              publisher: {
+                "@type": "Organization",
+                name: "Air Fryer Convert",
+                url: "https://airfryerconvert.com",
+              },
+            }),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
