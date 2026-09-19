@@ -33,10 +33,10 @@ export default function WattageCostPage() {
       <SiteHeader />
 
       <section className="mx-auto max-w-3xl px-6 pb-4 pt-14 text-center">
-        <h1 className="font-display text-4xl font-medium tracking-tight text-panel sm:text-5xl">
+        <h1 className="font-display text-5xl font-medium tracking-tight text-panel sm:text-6xl">
           Air fryer running cost calculator
         </h1>
-        <p className="mx-auto mt-4 max-w-xl font-body text-base leading-relaxed text-panel/70">
+        <p className="mx-auto mt-4 max-w-xl font-body text-lg leading-relaxed text-panel/70">
           Enter your air fryer's wattage, how long and how often you use it, and your electricity
           rate to see exactly what it costs to run — per use, per week, and per year.
         </p>
@@ -47,7 +47,7 @@ export default function WattageCostPage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-6 pb-20">
-        <h2 className="font-display text-2xl font-medium text-panel">
+        <h2 className="font-display text-3xl font-medium text-panel">
           How air fryer running costs are calculated
         </h2>
         <p className="mt-4 font-body leading-relaxed text-panel/80">
@@ -62,12 +62,12 @@ export default function WattageCostPage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-6 pb-24">
-        <h2 className="font-display text-2xl font-medium text-panel">Common questions</h2>
+        <h2 className="font-display text-3xl font-medium text-panel">Common questions</h2>
         <div className="mt-6 divide-y divide-panel/10 border-t border-panel/10">
           {faqs.map((item) => (
             <div key={item.q} className="py-5">
-              <h3 className="font-body text-base font-semibold text-panel">{item.q}</h3>
-              <p className="mt-2 font-body text-sm leading-relaxed text-panel/70">{item.a}</p>
+              <h3 className="font-body text-lg font-semibold text-panel">{item.q}</h3>
+              <p className="mt-2 font-body text-base leading-relaxed text-panel/70">{item.a}</p>
             </div>
           ))}
         </div>
