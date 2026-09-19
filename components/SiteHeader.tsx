@@ -11,14 +11,14 @@ export default function SiteHeader() {
     <header className="border-b border-steel/20 bg-panel">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
         <Link href="/" className="font-display text-xl font-medium tracking-tight text-cream">
-          airfryerconvert<span className="text-ember">.com</span>
+          airfryerconvert<span className="text-signal">.com</span>
         </Link>
         <nav className="hidden gap-7 sm:flex">
           {tools.map((t) => (
             <Link
               key={t.href}
               href={t.href}
-              className="font-body text-base text-cream/70 transition-colors hover:text-ember"
+              className="font-body text-base text-cream/70 transition-colors hover:text-signal"
             >
               {t.label}
             </Link>

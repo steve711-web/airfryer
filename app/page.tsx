@@ -50,7 +50,7 @@ export default function Home() {
 
           {/* Decorative readout panel — brings the appliance-display motif onto the homepage itself */}
           <div className="rounded-xl border border-panel/15 bg-panel p-8">
-            <div className="font-readout text-7xl font-bold leading-none text-ember readout-glow sm:text-8xl">
+            <div className="font-readout text-7xl font-bold leading-none text-signal readout-glow sm:text-8xl">
               03
             </div>
             <div className="mt-3 font-body text-xs uppercase tracking-widest text-cream/40">
@@ -71,7 +71,7 @@ export default function Home() {
             >
               <span className="font-readout text-sm text-panel/30">{tool.index}</span>
               <div>
-                <h2 className="font-display text-2xl font-medium text-panel group-hover:text-ember sm:text-3xl">
+                <h2 className="font-display text-2xl font-medium text-panel group-hover:text-signal sm:text-3xl">
                   {tool.title}
                 </h2>
                 <p className="mt-2 max-w-xl font-body text-base leading-relaxed text-panel/60">
@@ -85,7 +85,7 @@ export default function Home() {
                     Live
                   </span>
                 </span>
-                <span className="font-display text-2xl text-panel/20 transition-transform group-hover:translate-x-1 group-hover:text-ember">
+                <span className="font-display text-2xl text-panel/20 transition-transform group-hover:translate-x-1 group-hover:text-signal">
                   →
                 </span>
               </div>

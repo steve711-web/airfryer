@@ -54,10 +54,10 @@ export default function ConverterWidget() {
           onClick={() =>
             setDirection((d) => (d === "ovenToAirFryer" ? "airFryerToOven" : "ovenToAirFryer"))
           }
-          className="flex items-center gap-2 rounded-full border border-steel/40 bg-panelSoft px-4 py-2 font-body text-sm text-cream transition-colors hover:border-ember/60"
+          className="flex items-center gap-2 rounded-full border border-steel/40 bg-panelSoft px-4 py-2 font-body text-sm text-cream transition-colors hover:border-signal/60"
         >
           <span>{inputLabel}</span>
-          <span className="text-ember">→</span>
+          <span className="text-signal">→</span>
           <span>{outputLabel}</span>
           <span className="ml-1 text-cream/40">⇄</span>
         </button>
@@ -66,7 +66,7 @@ export default function ConverterWidget() {
           <button
             onClick={() => setUnit("F")}
             className={`px-3 py-1.5 font-readout transition-colors ${
-              unit === "F" ? "bg-ember text-panel" : "text-cream/60 hover:text-cream"
+              unit === "F" ? "bg-signal text-panel" : "text-cream/60 hover:text-cream"
             }`}
           >
             °F
@@ -74,7 +74,7 @@ export default function ConverterWidget() {
           <button
             onClick={() => setUnit("C")}
             className={`px-3 py-1.5 font-readout transition-colors ${
-              unit === "C" ? "bg-ember text-panel" : "text-cream/60 hover:text-cream"
+              unit === "C" ? "bg-signal text-panel" : "text-cream/60 hover:text-cream"
             }`}
           >
             °C
@@ -100,7 +100,7 @@ export default function ConverterWidget() {
               step={5}
               value={displayInputTemp}
               onChange={(e) => handleTempChange(Number(e.target.value))}
-              className="w-full accent-ember"
+              className="w-full accent-signal"
               aria-label={`${inputLabel} temperature`}
             />
           </div>
@@ -144,19 +144,19 @@ export default function ConverterWidget() {
             <div className="font-body text-xs uppercase tracking-wide text-cream/40">
               Recommended {outputLabel.toLowerCase()} temp
             </div>
-            <div className="readout-glow font-readout text-5xl font-bold text-ember">
+            <div className="readout-glow font-readout text-5xl font-bold text-signal">
               {displayTemp}
-              <span className="text-3xl text-ember/70">°{unit}</span>
+              <span className="text-3xl text-signal/70">°{unit}</span>
             </div>
           </div>
           <div>
             <div className="font-body text-xs uppercase tracking-wide text-cream/40">
               Recommended {outputLabel.toLowerCase()} time
             </div>
-            <div className="readout-glow font-readout text-5xl font-bold text-ember">
+            <div className="readout-glow font-readout text-5xl font-bold text-signal">
               {resultHM.hours > 0 ? `${resultHM.hours}h ` : ""}
               {resultHM.minutes}
-              <span className="text-3xl text-ember/70">min</span>
+              <span className="text-3xl text-signal/70">min</span>
             </div>
           </div>
           <p className="font-body text-xs leading-relaxed text-cream/40">

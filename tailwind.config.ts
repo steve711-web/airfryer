@@ -5,12 +5,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        panel: "#1F2421",      // control-panel charcoal
-        panelSoft: "#2B322D",  // raised panel surface
-        steel: "#3A3F3B",      // steel grey borders/dividers
-        cream: "#F5F2ED",      // off-white readable surface
-        ember: "#FF6B35",      // heating-element accent
-        ready: "#4A7C59",      // ready/success green
+        panel: "#181D24",      // cool control-panel charcoal (was warm/green-tinted)
+        panelSoft: "#242B34",  // raised panel surface
+        steel: "#3A424C",      // cool steel grey borders/dividers
+        cream: "#EEF1F4",      // cool off-white surface (was warm cream)
+        signal: "#3D8BFF",     // LED-blue accent (was ember orange)
+        ready: "#4A9C7A",      // ready/success green, cooled slightly to match
       },
       fontFamily: {
         display: ["var(--font-display)"],

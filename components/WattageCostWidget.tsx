@@ -31,8 +31,8 @@ export default function WattageCostWidget() {
               onClick={() => setWatts(w.watts)}
               className={`rounded-full border px-3 py-1.5 font-body text-xs transition-colors ${
                 watts === w.watts
-                  ? "border-ember bg-ember text-panel"
-                  : "border-steel/40 text-cream/60 hover:border-ember/60 hover:text-cream"
+                  ? "border-signal bg-signal text-panel"
+                  : "border-steel/40 text-cream/60 hover:border-signal/60 hover:text-cream"
               }`}
             >
               {w.label} · {w.watts}W
@@ -59,7 +59,7 @@ export default function WattageCostWidget() {
               step={50}
               value={watts}
               onChange={(e) => setWatts(Number(e.target.value))}
-              className="w-full accent-ember"
+              className="w-full accent-signal"
               aria-label="Wattage"
             />
           </div>
@@ -76,7 +76,7 @@ export default function WattageCostWidget() {
               step={1}
               value={minutesPerUse}
               onChange={(e) => setMinutesPerUse(Number(e.target.value))}
-              className="w-full accent-ember"
+              className="w-full accent-signal"
               aria-label="Minutes per use"
             />
           </div>
@@ -93,7 +93,7 @@ export default function WattageCostWidget() {
               step={1}
               value={usesPerWeek}
               onChange={(e) => setUsesPerWeek(Number(e.target.value))}
-              className="w-full accent-ember"
+              className="w-full accent-signal"
               aria-label="Uses per week"
             />
           </div>
@@ -124,7 +124,7 @@ export default function WattageCostWidget() {
             <div className="font-body text-xs uppercase tracking-wide text-cream/40">
               Cost per use
             </div>
-            <div className="readout-glow font-readout text-4xl font-bold text-ember">
+            <div className="readout-glow font-readout text-4xl font-bold text-signal">
               ${result.costPerUse.toFixed(2)}
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function WattageCostWidget() {
               <div className="font-body text-xs uppercase tracking-wide text-cream/40">
                 Per week
               </div>
-              <div className="readout-glow font-readout text-2xl font-bold text-ember">
+              <div className="readout-glow font-readout text-2xl font-bold text-signal">
                 ${result.costPerWeek.toFixed(2)}
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function WattageCostWidget() {
               <div className="font-body text-xs uppercase tracking-wide text-cream/40">
                 Per month
               </div>
-              <div className="readout-glow font-readout text-2xl font-bold text-ember">
+              <div className="readout-glow font-readout text-2xl font-bold text-signal">
                 ${result.costPerMonth.toFixed(2)}
               </div>
             </div>
@@ -150,7 +150,7 @@ export default function WattageCostWidget() {
             <div className="font-body text-xs uppercase tracking-wide text-cream/40">
               Per year
             </div>
-            <div className="readout-glow font-readout text-3xl font-bold text-ember">
+            <div className="readout-glow font-readout text-3xl font-bold text-signal">
               ${result.costPerYear.toFixed(2)}
             </div>
           </div>

@@ -43,7 +43,7 @@ export default function SizeFinderWidget() {
               step={1}
               value={householdSize}
               onChange={(e) => setHouseholdSize(Number(e.target.value))}
-              className="w-full accent-ember"
+              className="w-full accent-signal"
               aria-label="Household size"
             />
           </div>
@@ -59,8 +59,8 @@ export default function SizeFinderWidget() {
                   onClick={() => setStyle(s.value)}
                   className={`w-full rounded-md border px-4 py-3 text-left transition-colors ${
                     style === s.value
-                      ? "border-ember bg-panelSoft"
-                      : "border-steel/40 hover:border-ember/50"
+                      ? "border-signal bg-panelSoft"
+                      : "border-steel/40 hover:border-signal/50"
                   }`}
                 >
                   <div className="font-body text-sm font-semibold text-cream">{s.label}</div>
@@ -77,9 +77,9 @@ export default function SizeFinderWidget() {
             <div className="font-body text-xs uppercase tracking-wide text-cream/40">
               Recommended capacity
             </div>
-            <div className="readout-glow font-readout text-5xl font-bold text-ember">
+            <div className="readout-glow font-readout text-5xl font-bold text-signal">
               {result.recommendedQuarts}
-              <span className="text-2xl text-ember/70"> qt</span>
+              <span className="text-2xl text-signal/70"> qt</span>
             </div>
             <div className="font-readout text-lg text-cream/50">
               ({result.recommendedLiters} L)

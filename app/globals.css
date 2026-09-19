@@ -19,7 +19,7 @@ body {
 
 /* visible focus ring, kept intentional rather than default browser blue */
 :focus-visible {
-  outline: 2px solid #FF6B35;
+  outline: 2px solid #3D8BFF;
   outline-offset: 2px;
 }
 
@@ -34,5 +34,5 @@ body {
 
 /* seven-segment style readout ticks, used behind the LED numbers */
 .readout-glow {
-  text-shadow: 0 0 18px rgba(255, 107, 53, 0.45);
+  text-shadow: 0 0 18px rgba(61, 139, 255, 0.5);
 }
