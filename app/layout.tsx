@@ -65,13 +65,13 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Air Fryer Convert",
-              url: "https://airfryerconvert.com",
+              url: "https://www.airfryerconvert.com",
               description:
                 "Three air fryer calculators: an oven-to-air-fryer converter, a running cost calculator, and a size finder.",
               publisher: {
                 "@type": "Organization",
                 name: "Air Fryer Convert",
-                url: "https://airfryerconvert.com",
+                url: "https://www.airfryerconvert.com",
               },
             }),
           }}
