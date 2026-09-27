@@ -38,9 +38,21 @@ export default function ConverterWidget() {
   const draggingTrack = useRef(false);
 
   const result = useMemo(() => {
-    return direction === "ovenToAir"
-      ? convertOvenToAirFryer(tempF, timeMinutes)
-      : convertAirFryerToOven(tempF, timeMinutes);
+    const raw =
+      direction === "ovenToAir"
+        ? convertOvenToAirFryer(tempF, timeMinutes)
+        : convertAirFryerToOven(tempF, timeMinutes);
+    return "airFryerTempF" in raw
+      ? {
+          temperatureF: raw.airFryerTempF,
+          temperatureC: raw.airFryerTempC,
+          timeMinutes: raw.airFryerTimeMinutes,
+        }
+      : {
+          temperatureF: raw.ovenTempF,
+          temperatureC: raw.ovenTempC,
+          timeMinutes: raw.ovenTimeMinutes,
+        };
   }, [direction, tempF, timeMinutes]);
 
   const displayInputTemp = unit === "F" ? tempF : Math.round(fToC(tempF));
