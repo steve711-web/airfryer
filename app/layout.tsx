@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, Space_Mono } from "next/font/google";
 import Script from "next/script";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -76,7 +78,9 @@ export default function RootLayout({
             }),
           }}
         />
+        <SiteHeader />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );
