@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import SiteHeader from "@/components/SiteHeader";
 import SizeFinderWidget from "@/components/SizeFinderWidget";
 
 export const metadata: Metadata = {
@@ -30,7 +29,6 @@ const faqs = [
 export default function SizeCalculatorPage() {
   return (
     <main className="min-h-screen bg-cream">
-      <SiteHeader />
 
       <section className="mx-auto max-w-3xl px-6 pb-4 pt-14 text-center">
         <h1 className="font-display text-5xl font-medium tracking-tight text-panel sm:text-6xl">
