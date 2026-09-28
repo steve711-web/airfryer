@@ -1,5 +1,4 @@
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
 
 const tools = [
   {
@@ -25,8 +24,6 @@ const tools = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-cream">
-      <SiteHeader />
-
       {/* Asymmetric hero: headline left, readout panel right — not centered */}
       <section className="mx-auto max-w-6xl px-6 pb-14 pt-16 sm:pt-24">
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-end lg:gap-16">
