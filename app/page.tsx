@@ -28,9 +28,9 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 pb-14 pt-16 sm:pt-24">
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-end lg:gap-16">
           <div>
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-panel/15 px-3 py-1">
-              <span className="h-1.5 w-1.5 rounded-full bg-ready" />
-              <span className="font-readout text-[11px] uppercase tracking-widest text-panel/60">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-panel/15 px-3 py-1.5">
+              <span className="h-2 w-2 rounded-full bg-ready" />
+              <span className="font-readout text-xs font-semibold uppercase tracking-widest text-panel/80">
                 3 tools live
               </span>
             </div>
@@ -76,9 +76,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex items-center gap-3 sm:justify-end">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-ready/10 px-2.5 py-1">
-                  <span className="h-1.5 w-1.5 rounded-full bg-ready" />
-                  <span className="font-readout text-[10px] uppercase tracking-widest text-ready">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-ready/15 px-2.5 py-1">
+                  <span className="h-2 w-2 rounded-full bg-ready" />
+                  <span className="font-readout text-[11px] font-semibold uppercase tracking-widest text-[#2E6B4C]">
                     Live
                   </span>
                 </span>
