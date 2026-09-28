@@ -3,10 +3,10 @@ import FoodQuickReference from "@/components/FoodQuickReference";
 
 export default function OvenToAirFryerPage() {
   return (
-    <main className="mx-auto max-w-6xl px-6 py-16 lg:py-24">
+    <main className="mx-auto max-w-6xl px-6 py-10 sm:py-16 lg:py-24">
       <header className="max-w-2xl">
         <p className="text-xs uppercase tracking-[0.25em] text-panel/40">Conversion Engine</p>
-        <h1 className="mt-3 font-display text-4xl font-semibold tracking-[-0.02em] text-panel lg:text-5xl">
+        <h1 className="mt-3 font-display text-3xl font-semibold tracking-[-0.02em] text-panel sm:text-4xl lg:text-5xl">
           Oven to Air Fryer Converter
         </h1>
         <p className="mt-4 text-base leading-relaxed text-panel/60">

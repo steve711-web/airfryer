@@ -112,13 +112,13 @@ export default function ConverterWidget() {
 
   return (
     <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
-      <div className="rounded-[28px] border border-steel/40 bg-panelSoft/60 p-7 lg:p-9">
-        <div className="flex items-center justify-between gap-4">
+      <div className="rounded-[28px] border border-steel/40 bg-panelSoft/60 p-5 sm:p-7 lg:p-9">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex rounded-full border border-steel/50 bg-panel/60 p-1">
             <button
               type="button"
               onClick={() => setDirection("ovenToAir")}
-              className={`rounded-full px-4 py-1.5 text-sm font-medium tracking-tight transition-colors ${
+              className={`flex-1 whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium tracking-tight transition-colors sm:flex-none sm:px-4 sm:text-sm ${
                 direction === "ovenToAir" ? "bg-signal text-panel" : "text-cream/60"
               }`}
             >
@@ -127,14 +127,14 @@ export default function ConverterWidget() {
             <button
               type="button"
               onClick={() => setDirection("airToOven")}
-              className={`rounded-full px-4 py-1.5 text-sm font-medium tracking-tight transition-colors ${
+              className={`flex-1 whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium tracking-tight transition-colors sm:flex-none sm:px-4 sm:text-sm ${
                 direction === "airToOven" ? "bg-signal text-panel" : "text-cream/60"
               }`}
             >
               Air Fryer → Oven
             </button>
           </div>
-          <div className="flex overflow-hidden rounded-full border border-steel/50">
+          <div className="flex self-start overflow-hidden rounded-full border border-steel/50">
             <button
               type="button"
               onClick={() => setUnit("F")}
@@ -163,7 +163,7 @@ export default function ConverterWidget() {
             onPointerMove={dialPointerMove}
             onPointerUp={dialPointerUp}
             onPointerLeave={dialPointerUp}
-            className="relative h-56 w-56 cursor-grab touch-none select-none rounded-full bg-[radial-gradient(circle_at_30%_30%,#2c333d,#11151b)] shadow-[inset_0_2px_10px_rgba(0,0,0,0.6),0_18px_30px_-14px_rgba(0,0,0,0.8)] active:cursor-grabbing"
+            className="relative h-48 w-48 cursor-grab touch-none select-none rounded-full bg-[radial-gradient(circle_at_30%_30%,#2c333d,#11151b)] shadow-[inset_0_2px_10px_rgba(0,0,0,0.6),0_18px_30px_-14px_rgba(0,0,0,0.8)] active:cursor-grabbing [--dial-r:72px] sm:h-56 sm:w-56 sm:[--dial-r:84px]"
           >
             <svg viewBox="0 0 240 240" className="absolute inset-0 h-full w-full">
               <circle
@@ -194,7 +194,7 @@ export default function ConverterWidget() {
             <div
               className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-signal shadow-[0_0_12px_rgba(61,139,255,0.9)]"
               style={{
-                transform: `translate(-50%, -50%) rotate(${dialAngle}deg) translateY(-84px)`,
+                transform: `translate(-50%, -50%) rotate(${dialAngle}deg) translateY(calc(var(--dial-r) * -1))`,
               }}
             />
             <div className="absolute inset-8 flex flex-col items-center justify-center rounded-full bg-panel/80">
@@ -240,7 +240,7 @@ export default function ConverterWidget() {
         </div>
       </div>
 
-      <div className="relative overflow-hidden rounded-[28px] border border-black/40 bg-[linear-gradient(155deg,#15181d_0%,#0c0e11_65%)] p-7 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.9)] lg:p-9">
+      <div className="relative overflow-hidden rounded-[28px] border border-black/40 bg-[linear-gradient(155deg,#15181d_0%,#0c0e11_65%)] p-5 shadow-[0_30px_60px_-25px_rgba(0,0,0,0.9)] sm:p-7 lg:p-9">
         <div
           aria-hidden
           className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-signal/10 blur-3xl"
@@ -257,38 +257,38 @@ export default function ConverterWidget() {
           <span className="h-2 w-2 rounded-full bg-ready shadow-[0_0_10px_rgba(74,156,122,0.9)]" />
         </div>
 
-        <div className="relative mt-8 grid grid-cols-2 gap-4">
-          <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-5">
-            <span className="text-[11px] uppercase tracking-[0.2em] text-cream/40">
+        <div className="relative mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-4">
+          <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-3 sm:p-5">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-cream/40 sm:text-[11px]">
               Temperature
             </span>
             <div
               key={resultTempPrimary}
               className="mt-2 flex items-baseline gap-1 font-readout font-black tracking-[-0.04em] text-cream animate-valuePop"
             >
-              <span className="text-5xl lg:text-6xl">{resultTempPrimary}</span>
-              <span className="text-2xl text-signal">{resultTempUnit}</span>
+              <span className="text-3xl sm:text-5xl lg:text-6xl">{resultTempPrimary}</span>
+              <span className="text-lg text-signal sm:text-2xl">{resultTempUnit}</span>
             </div>
           </div>
-          <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-5">
-            <span className="text-[11px] uppercase tracking-[0.2em] text-cream/40">
+          <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-3 sm:p-5">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-cream/40 sm:text-[11px]">
               Cook Time
             </span>
             <div
               key={result.timeMinutes}
               className="mt-2 flex items-baseline gap-1 font-readout font-black tracking-[-0.04em] text-cream animate-valuePop"
             >
-              <span className="text-5xl lg:text-6xl">{result.timeMinutes}</span>
-              <span className="text-2xl text-brass">min</span>
+              <span className="text-3xl sm:text-5xl lg:text-6xl">{result.timeMinutes}</span>
+              <span className="text-lg text-brass sm:text-2xl">min</span>
             </div>
           </div>
         </div>
 
-        <div className="relative mt-6 flex items-center gap-3 rounded-2xl border border-white/5 bg-white/[0.02] px-5 py-4">
-          <span className="text-[11px] uppercase tracking-[0.2em] text-cream/40">
+        <div className="relative mt-6 flex flex-wrap items-center gap-2 rounded-2xl border border-white/5 bg-white/[0.02] px-4 py-3 sm:gap-3 sm:px-5 sm:py-4">
+          <span className="text-[10px] uppercase tracking-[0.2em] text-cream/40 sm:text-[11px]">
             From
           </span>
-          <span className="font-readout text-base font-semibold text-cream/70">
+          <span className="font-readout text-sm font-semibold text-cream/70 sm:text-base">
             {unit === "F" ? tempF : Math.round(fToC(tempF))}
             {unit === "F" ? "°F" : "°C"} · {timeMinutes} min
           </span>
