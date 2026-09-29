@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ConverterWidget from "@/components/ConverterWidget";
 import FoodQuickReference from "@/components/FoodQuickReference";
 import ConversionChartTable from "@/components/ConversionChartTable";
+import TopAirFryers from "@/components/TopAirFryers";
 
 export const metadata: Metadata = {
   title: "Oven to Air Fryer Conversion Calculator | Free Temp & Time Chart",
@@ -112,6 +113,22 @@ export default function OvenToAirFryerPage() {
         >
           Download the free printable chart (PDF) →
         </a>
+      </section>
+
+      <section className="mt-20">
+        <h2 className="font-display text-2xl font-semibold tracking-[-0.01em] text-panel">
+          Top 5 Air Fryers
+        </h2>
+        <p className="mt-2 max-w-xl text-sm text-panel/50">
+          Picked from independent lab reviews, not sponsored placement — covers a range of
+          budgets and household sizes.
+        </p>
+        <div className="mt-8">
+          <TopAirFryers />
+        </div>
+        <p className="mt-4 text-xs text-panel/30">
+          As an Amazon Associate, this site may earn from qualifying purchases.
+        </p>
       </section>
 
       <section className="mt-20 max-w-3xl">

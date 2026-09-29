@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SizeFinderWidget from "@/components/SizeFinderWidget";
+import TopAirFryers from "@/components/TopAirFryers";
 
 export const metadata: Metadata = {
   title: "What Size Air Fryer Do I Need? — Air Fryer Size Calculator",
@@ -24,12 +25,15 @@ const faqs = [
     q: "Do bigger air fryers cost more to run?",
     a: "Larger air fryers do tend to have higher wattage, but they also often cook more food in one batch rather than requiring multiple cook cycles — so the actual cost per meal isn't necessarily higher. Use the running cost calculator to check a specific model's wattage.",
   },
+  {
+    q: "What size Ninja air fryer should I get?",
+    a: "The same household-size guidance applies regardless of brand: 2-4 quarts for one person, 4-6 quarts for a couple, 6-8 quarts for a family of four, and 8+ quarts (often a dual-basket model) for larger households or batch cooking. Ninja's dual-basket models are worth considering if you regularly cook two different foods at once.",
+  },
 ];
 
 export default function SizeCalculatorPage() {
   return (
     <main className="min-h-screen bg-cream">
-
       <section className="mx-auto max-w-3xl px-6 pb-4 pt-14 text-center">
         <h1 className="font-display text-5xl font-medium tracking-tight text-panel sm:text-6xl">
           What size air fryer do you need?
@@ -56,6 +60,20 @@ export default function SizeCalculatorPage() {
           household size and typical portion habits, rather than just picking the cheapest or
           smallest option, is what actually determines whether an air fryer gets used daily or
           ends up in a cupboard.
+        </p>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-24">
+        <h2 className="font-display text-3xl font-medium text-panel">Top 5 Air Fryers</h2>
+        <p className="mt-2 max-w-xl font-body text-base leading-relaxed text-panel/60">
+          Picked from independent lab reviews, not sponsored placement — covers a range of
+          budgets and household sizes.
+        </p>
+        <div className="mt-8">
+          <TopAirFryers />
+        </div>
+        <p className="mt-4 text-xs text-panel/30">
+          As an Amazon Associate, this site may earn from qualifying purchases.
         </p>
       </section>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import WattageCostWidget from "@/components/WattageCostWidget";
+import TopAirFryers from "@/components/TopAirFryers";
 
 export const metadata: Metadata = {
   title: "Air Fryer Running Cost Calculator — Electricity Cost Per Use",
@@ -24,12 +25,15 @@ const faqs = [
     q: "Why does the calculator use less than the full wattage?",
     a: "Air fryers don't draw their full rated wattage for the entire cook time — they cycle on and off once they reach temperature, similar to an oven's thermostat. The calculator applies a realistic duty-cycle adjustment instead of assuming full power the whole time, which would overstate the actual cost.",
   },
+  {
+    q: "Does a Ninja air fryer use more electricity than other brands?",
+    a: "Not meaningfully. Ninja air fryers typically draw 1,400-1,800 watts, which is in line with most other major brands — the biggest factor in running cost is wattage and cook time, not the brand itself. Enter your specific model's wattage above for an exact figure.",
+  },
 ];
 
 export default function WattageCostPage() {
   return (
     <main className="min-h-screen bg-cream">
-
       <section className="mx-auto max-w-3xl px-6 pb-4 pt-14 text-center">
         <h1 className="font-display text-5xl font-medium tracking-tight text-panel sm:text-6xl">
           Air fryer running cost calculator
@@ -56,6 +60,20 @@ export default function WattageCostPage() {
           above also accounts for the fact that air fryers cycle their heating element on and off
           rather than running at full power continuously, giving a more realistic cost than a
           simple wattage-times-time calculation.
+        </p>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-24">
+        <h2 className="font-display text-3xl font-medium text-panel">Top 5 Air Fryers</h2>
+        <p className="mt-2 max-w-xl font-body text-base leading-relaxed text-panel/60">
+          Picked from independent lab reviews, not sponsored placement — covers a range of
+          budgets and household sizes.
+        </p>
+        <div className="mt-8">
+          <TopAirFryers />
+        </div>
+        <p className="mt-4 text-xs text-panel/30">
+          As an Amazon Associate, this site may earn from qualifying purchases.
         </p>
       </section>
 
