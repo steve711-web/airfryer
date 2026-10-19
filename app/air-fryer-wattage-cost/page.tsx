@@ -3,9 +3,9 @@ import WattageCostWidget from "@/components/WattageCostWidget";
 import TopAirFryers from "@/components/TopAirFryers";
 
 export const metadata: Metadata = {
-  title: "Air Fryer Running Cost Calculator — Electricity Cost Per Use",
+  title: "Air Fryer Electricity Consumption & Running Cost Calculator",
   description:
-    "Work out exactly what your air fryer costs to run per use, per week, and per year based on its wattage and your electricity rate.",
+    "Calculate your air fryer's electricity consumption and exact running cost — per use, per week, and per year. Enter wattage and your electricity rate.",
 };
 
 const faqs = [
