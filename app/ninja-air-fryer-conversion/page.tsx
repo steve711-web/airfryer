@@ -6,7 +6,7 @@ import TopAirFryers from "@/components/TopAirFryers";
 export const metadata: Metadata = {
   title: "Ninja Air Fryer Conversion & Settings Guide — Every Model",
   description:
-    "Convert any oven recipe to Ninja air fryer settings. Covers Ninja Air Fryer, Foodi, Dual/Double Stack, Crispi, Flip, Glass, and French Door models — temperature and time, free.",
+    "Convert any oven recipe to Ninja air fryer settings — temperature and time for every model: Foodi, Dual, Crispi, Flip, Glass, French Door.",
 };
 
 const ninjaModels = [
