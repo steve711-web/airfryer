@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ConverterWidget from "@/components/ConverterWidget";
 import FoodQuickReference from "@/components/FoodQuickReference";
 import ConversionChartTable from "@/components/ConversionChartTable";
@@ -135,6 +136,15 @@ export default function OvenToAirFryerPage() {
         <h2 className="font-display text-2xl font-semibold tracking-[-0.01em] text-panel">
           Frequently Asked Questions
         </h2>
+        <p className="mt-2 text-sm text-panel/50">
+          Using a Ninja?{" "}
+          <Link
+            href="/ninja-air-fryer-conversion"
+            className="font-semibold text-signal hover:underline"
+          >
+            See the full Ninja air fryer settings guide →
+          </Link>
+        </p>
         <div className="mt-6 divide-y divide-panel/10">
           {faqs.map((faq) => (
             <div key={faq.question} className="py-5">

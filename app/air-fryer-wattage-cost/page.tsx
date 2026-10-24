@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import WattageCostWidget from "@/components/WattageCostWidget";
 import TopAirFryers from "@/components/TopAirFryers";
 
@@ -79,6 +80,15 @@ export default function WattageCostPage() {
 
       <section className="mx-auto max-w-3xl px-6 pb-24">
         <h2 className="font-display text-3xl font-medium text-panel">Common questions</h2>
+        <p className="mt-2 font-body text-sm text-panel/50">
+          Using a Ninja?{" "}
+          <Link
+            href="/ninja-air-fryer-conversion"
+            className="font-semibold text-signal hover:underline"
+          >
+            See the full Ninja air fryer settings guide →
+          </Link>
+        </p>
         <div className="mt-6 divide-y divide-panel/10 border-t border-panel/10">
           {faqs.map((item) => (
             <div key={item.q} className="py-5">
